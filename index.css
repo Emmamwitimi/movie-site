@@ -1,0 +1,97 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#mainContainer {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+    padding: 20px;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+p {
+    font-size: 1.5em;
+    margin-right: 20px;
+}
+
+#moviesList {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    max-height: 300px; /* Max height for moviesList */
+    overflow-y: auto; /* Enable vertical scroll if content exceeds max height */
+}
+
+#allMovies {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#allMovies li {
+    background-color: #ffffff;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+#availableTickets {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    max-height: 200px; /* Max height for availableTickets */
+    overflow-y: auto; /* Enable vertical scroll if content exceeds max height */
+    display: none; /* Initially hidden */
+}
+
+#availableTickets h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+#ticketsAvailable {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#ticketsAvailable li {
+    background-color: #ffffff;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
