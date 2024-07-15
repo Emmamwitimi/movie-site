@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     const buyBtn = document.createElement("button");
                     buyBtn.textContent = 'Buy Ticket';
                     buyBtn.addEventListener('click', () => {
-                        movieDisplay();
+                        movieDisplay(movie);
                     });
 
                     // Append Buy Ticket button to availableTicketsList <li>
@@ -29,13 +29,23 @@ document.addEventListener("DOMContentLoaded", () => {
                     ticketsOrderedList.appendChild(availableTicketsList);
                 }
             });
+            // Function to display movie details
+            function movieDisplay(movie) {
+                const movieDetails = document.getElementById('movieDetails');
+                movieDetails.innerHTML = `
+                    <img src="${movie.poster}" alt="${movie.title} poster">
+                    <h2>${movie.title}</h2>
+                    <p>Runtime: ${movie.runtime} minutes</p>
+                    <p>Showtime: ${movie.showtime}</p>
+                    <p>Description: ${movie.description}</p>
+                    <p>Available Tickets: ${movie.capacity - movie.tickets_sold}</p>
+                `;
+            }
         })
         .catch(error => {
             console.error('Error fetching movies:', error);
         });
-        function movieDisplay{
-            
-        };
+        
 
     const bookBtn = document.getElementById('bookbtn');
     const availableTicketsSection = document.getElementById('availableTickets');
