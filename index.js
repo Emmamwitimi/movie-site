@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const moviesList = document.getElementById('allMovies');
     const ticketsOrderedList = document.getElementById('ticketsAvailable');
     
-    fetch('http://localhost:3000/films')
+    fetch('https://raw.githubusercontent.com/Emmamwitimi/movie-site/main/db.json')
         .then(response => response.json())
         .then(data => {
             data.films.forEach(movie => {
