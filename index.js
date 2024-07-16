@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
     fetch('http://localhost:3000/films')
         .then(response => response.json())
         .then(data => {
-            data.forEach(movie => {
+            data.films.forEach(movie => {
                 const movieTitle = document.createElement("li");
                 movieTitle.textContent = movie.title;
                 moviesList.appendChild(movieTitle);
